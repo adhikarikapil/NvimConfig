@@ -1,4 +1,30 @@
 return {
+    {
+        {"echasnovski/mini.nvim", version = false},
+        --Comments
+        {
+            'echasnovski/mini.comment',
+            version = false,
+            dependencies = {
+                'JoosepAlviste/nvim-ts-context-commentstring',
+            },
+            config = function()
+                require('ts_context_commentstring').setup{
+                    -- tsx, jsx, html, svelte comment support
+                    options = {
+                        custom_commentstring = function()
+                            return requre('ts_context_commentstring.internal').calculate_commentstring({
+                                key = 'commentstring'
+                            })
+                            or vim.bo.commentstring
+                        end,
+                    },
+                }
+            end
+        }
+    },
+    {
+
         'echasnovski/mini.files',
         config = function()
             local MiniFiles = require("mini.files")
@@ -17,3 +43,4 @@ return {
             end, { desc = "Toggle into currently opened file" })
         end,
     }
+}

@@ -24,3 +24,9 @@ vim.keymap.set({"n", "v"}, "C-v", '"+p', {noremap = true, silent = true})
 
 --LAZY KEYMAP
 vim.keymap.set('n', "<leader>lz", vim.cmd.Lazy)
+
+vim.keymap.set('n', "<leader>rn", require('Beyonder.core.utils').restart_nvim, {desc = "Restart Neovim"})
+
+
+
+
