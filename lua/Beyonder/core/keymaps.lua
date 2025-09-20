@@ -14,4 +14,8 @@ vim.keymap.set("n", "<leader>/", ":noh<CR>")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+vim.keymap.set("v", "<", "<gv", opts)
+vim.keymap.set("v", ">", ">gv", opts)
 
+--Keymap for Tabs
+vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>")
