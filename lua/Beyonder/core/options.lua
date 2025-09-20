@@ -33,7 +33,7 @@ vim.opt.backspace = {"start", "eol", "indent"}
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
-vim.opt.clipboard:append("unnamedplus")
-
 vim.opt.mouse = 'a'
 vim.g.editorconfig = true
+
+vim.opt.clipboard = "unnamedplus"

@@ -17,3 +17,6 @@ vim.keymap.set("v", ">", ">gv", opts)
 
 --Keymap for Tabs
 vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>")
+
+vim.keymap.set("v", "<C-c>", '"+y', {noremap = true, silent = true})
+vim.keymap.set({"n", "v"}, "C-v", '"+p', {noremap = true, silent = true})

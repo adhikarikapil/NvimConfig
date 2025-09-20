@@ -21,7 +21,7 @@ return {
         })
 
         --Keymaps for oil
-        vim.keymap.set("n", '<leader>fa', require("oil").toggle_float, {desc = 'toggle float oil'})
+        vim.keymap.set("n", '<leader>na', require("oil").toggle_float, {desc = 'toggle float oil'})
 
         vim.api.nvim_create_autocmd("FileType", {
             pattern = "oil",
@@ -29,5 +29,9 @@ return {
                 vim.opt_local.cursorline = true
             end
         })
+
+        --Transparent background for floating Oil Explorer
+        vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
+        vim.api.nvim_set_hl(0, "FloatBorder", {bg = "none"})
     end
 }
