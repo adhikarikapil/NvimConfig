@@ -21,3 +21,6 @@ vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>")
 
 vim.keymap.set("v", "<C-c>", '"+y', {noremap = true, silent = true})
 vim.keymap.set({"n", "v"}, "C-v", '"+p', {noremap = true, silent = true})
+
+--LAZY KEYMAP
+vim.keymap.set('n', "<leader>lz", vim.cmd.Lazy)
