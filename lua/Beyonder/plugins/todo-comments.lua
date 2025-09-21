@@ -1,4 +1,5 @@
 return {
+    --TODO:
 	-- Quickly Jump through the todo tags
 	"folke/todo-comments.nvim",
 	event = { "BufReadPre", "BufNewFile" },
@@ -40,8 +41,8 @@ return {
             search = {
                 command = "rg",
                 args = {
-                    "--color=never",
-                    "--no-heading",
+                    --TODO:
+                    "--color=never", "--no-heading",
                     "--with-filename",
                     "--line-number",
                     "--column",
@@ -51,12 +52,12 @@ return {
 		})
 
 		-- keymaps
-		vim.keymap.set("n", "]t", function()
-			todo_comments.jump_next()
+		vim.keymap.set("n", "]", function()
+			todo_comments.jump_prev()
 		end, { desc = "Next todo comment" })
 
-		vim.keymap.set("n", "[t", function()
-			todo_comments.jump_prev()
+		vim.keymap.set("n", "[", function()
+			todo_comments.jump_next()
 		end, { desc = "Previous todo comment" })
 	end,
 }
