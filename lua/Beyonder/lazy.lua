@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup(
     {
         { import = "Beyonder.plugins" },
+        { import = "Beyonder.plugins.lsp" },
     },
     {
         checker = {
