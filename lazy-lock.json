@@ -1,5 +1,6 @@
 {
   "LuaSnip": { "branch": "master", "commit": "458560534a73f7f8d7a11a146c801db00b081df0" },
+  "auto-save.nvim": { "branch": "main", "commit": "5fbcaac0a2698c87a9a1bd2083cb6949505cca12" },
   "auto-session": { "branch": "main", "commit": "3a895bace7d0260c8daac5bf5c84236765f00212" },
   "catppuccin": { "branch": "main", "commit": "f19cab18ec4dc86d415512c7a572863b2adbcc18" },
   "cmp-buffer": { "branch": "main", "commit": "b74fab3656eea9de20a9b8116afa3cfc4ec09657" },
