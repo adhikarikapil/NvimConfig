@@ -12,7 +12,13 @@ return {
         require('neo-tree').setup({
             window = {
                 width = 50,
-            }
+            },
+            filesystem = {
+                follow_current_file = {
+                    enabled = true,
+                    leave_dirs_open = true,
+                },
+            },
         })
     end,
     lazy = false,
