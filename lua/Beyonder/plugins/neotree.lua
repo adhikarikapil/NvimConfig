@@ -7,7 +7,8 @@ return {
         "nvim-tree/nvim-web-devicons",
     },
     config = function()
-        vim.keymap.set('n', "<leader>fa", ':Neotree toggle<CR>')
+        vim.keymap.set('n', "<leader>ff", ':Neotree toggle<CR>')
+        vim.keymap.set('n', "<leader>fa", ':Neotree toggle reveal<CR>')
         require('neo-tree').setup({
             window = {
                 width = 50,
