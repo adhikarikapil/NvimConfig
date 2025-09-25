@@ -23,9 +23,6 @@ vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>")
 vim.keymap.set("v", "<C-c>", '"+y', { noremap = true, silent = true })
 vim.keymap.set({ "n", "v" }, "C-v", '"+p', { noremap = true, silent = true })
 
---LAZY KEYMAP
-vim.keymap.set("n", "<leader>lz", vim.cmd.Lazy)
-
 -- Navigation remap
 vim.api.nvim_set_keymap("n", "<leader>h", "<C-w>h", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>l", "<C-w>l", { noremap = true, silent = true })

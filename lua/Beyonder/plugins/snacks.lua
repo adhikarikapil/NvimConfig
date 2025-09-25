@@ -45,7 +45,7 @@ return {
 		},
 		keys = {
 			{
-				"<leader>lg",
+				"<leader>gg",
 				function()
 					require("snacks").lazygit()
 				end,
