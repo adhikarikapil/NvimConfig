@@ -222,7 +222,7 @@ return {
 				end,
 			})
 
-			vim.keymap.set("n", "<leader>ll", function()
+			vim.keymap.set("n", "<leader>pp", function()
 				lint.try_lint()
 			end, { desc = "Trigger linting for current file" })
 		end,
@@ -261,7 +261,7 @@ return {
 				},
 			})
 
-			vim.keymap.set({ "n", "v" }, "<leader>l", function()
+			vim.keymap.set({ "n", "v" }, "<leader>p", function()
 				conform.format({
 					lsp_fallback = true,
 					async = false,
