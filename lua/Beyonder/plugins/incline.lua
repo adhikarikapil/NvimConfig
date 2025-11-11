@@ -10,7 +10,7 @@ return {
 
             -- Set the custom highlight group for the filename
             vim.cmd([[
-              hi InclineFilename guifg=#28B463 gui=bold,italic
+              hi InclineFilename guifg=#ff9e64 gui=bold,italic
             ]])
 
             require("incline").setup({
