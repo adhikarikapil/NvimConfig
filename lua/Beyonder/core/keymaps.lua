@@ -27,3 +27,9 @@ vim.api.nvim_set_keymap("n", "<leader>h", "<C-w>h", { noremap = true, silent = t
 vim.api.nvim_set_keymap("n", "<leader>l", "<C-w>l", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>j", "<C-w>j", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>k", "<C-w>k", { noremap = true, silent = true })
+
+
+-- Zooms / Focus on splits
+vim.api.nvim_set_keymap("n", "<leader>m", "<C-w>|", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>z", "<C-w>_", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>=", "<C-w>=", { noremap = true, silent = true })
