@@ -33,3 +33,4 @@ vim.api.nvim_set_keymap("n", "<leader>k", "<C-w>k", { noremap = true, silent = t
 vim.api.nvim_set_keymap("n", "<leader>m", "<C-w>|", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>z", "<C-w>_", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>=", "<C-w>=", { noremap = true, silent = true })
+

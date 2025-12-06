@@ -361,6 +361,13 @@ return {
             },
         })
 
+        cmp.setup.filetype({ 'sql' }, {
+            sources = {
+                { name = "vim-dadbod-completion" },
+                { name = "buffer" },
+            },
+        })
+
         -- NOTE: Added Ghost text stuff
         -- Only show ghost text at word boundaries, not inside keywords. Based on idea
         -- from: https://github.com/hrsh7th/nvim-cmp/issues/2035#issuecomment-2347186210
