@@ -260,7 +260,7 @@ return {
                 --     smart_bs()
                 -- end, { 'i', 's' }),
 
-                ["<C-e>"] = cmp.mapping.abort(), -- close completion window
+                -- ["<C-e>"] = cmp.mapping.abort(), -- close completion window
                 ['<C-d>'] = cmp.mapping(function()
                     cmp.close_docs()
                 end, { 'i', 's' }),

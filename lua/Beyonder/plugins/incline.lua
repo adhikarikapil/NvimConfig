@@ -1,7 +1,7 @@
 return {
     {
         "b0o/incline.nvim",
-        enabled = false,
+        enabled = true,
         dependencies = {"nvim-tree/nvim-web-devicons"},
         config = function ()
             local devicons = require("nvim-web-devicons")

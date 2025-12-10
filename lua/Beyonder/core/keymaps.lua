@@ -28,9 +28,14 @@ vim.api.nvim_set_keymap("n", "<leader>l", "<C-w>l", { noremap = true, silent = t
 vim.api.nvim_set_keymap("n", "<leader>j", "<C-w>j", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>k", "<C-w>k", { noremap = true, silent = true })
 
+-- Splits
+vim.api.nvim_set_keymap("n", "<leader>v", "<C-w>v", { noremap = true, silent = true })
 
 -- Zooms / Focus on splits
 vim.api.nvim_set_keymap("n", "<leader>m", "<C-w>|", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>z", "<C-w>_", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>=", "<C-w>=", { noremap = true, silent = true })
 
+--  For Folds
+vim.api.nvim_set_keymap("n", "<leader>o", "zR", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>zo", "zM", { noremap = true, silent = true })
