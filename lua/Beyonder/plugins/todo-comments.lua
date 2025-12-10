@@ -5,12 +5,19 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	keys = {
 		{
-            "<leader>pt",
-            "<cmd>TodoQuickFix<CR>",
-            desc = 'List TODOs in QuickFix',
+			"<leader>pt",
+			"<cmd>lua require('todo-comments').toggle()<CR>",
+			desc = "List TODOs in QuickFix",
+		},
+		{
+			"<leader>st",
+			"<cmd>TodoTelescope<CR>",
+			desc = "Search Todos with telescope",
 		},
 	},
-	dependencies = { "nvim-lua/plenary.nvim" },
+	dependencies = {
+		{ "nvim-lua/plenary.nvim" },
+	},
 	config = function()
 		local todo_comments = require("todo-comments")
 
@@ -60,11 +67,11 @@ return {
 		})
 
 		-- keymaps
-		vim.keymap.set("n", "]", function()
+		vim.keymap.set("n", "]]", function()
 			todo_comments.jump_prev()
 		end, { desc = "Next todo comment" })
 
-		vim.keymap.set("n", "[", function()
+		vim.keymap.set("n", "[[", function()
 			todo_comments.jump_next()
 		end, { desc = "Previous todo comment" })
 	end,
