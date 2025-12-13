@@ -12,9 +12,7 @@ vim.opt.smartindent = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undofile = true
-
-vim.opt.hlsearch = true
+vim.opt.undofile = true vim.opt.hlsearch = true
 vim.opt.incsearch = true
 vim.opt.inccommand = "split"
 vim.opt.ignorecase = true
@@ -62,4 +60,21 @@ vim.api.nvim_create_autocmd("TextChanged", {
         end
     end
 })
- 
+
+-- ColorScheme Change with command 
+-- Define a command to switch between color schemes
+vim.api.nvim_create_user_command('SwitchColorscheme', function(opts)
+  -- List of available color schemes
+  local color_schemes = { "catppuccin", "tokyodark" }
+  -- Display a prompt for selecting a color scheme
+  vim.ui.select(color_schemes, {
+    prompt = 'Choose a color scheme:',
+  }, function(choice)
+    if choice then
+      vim.cmd("colorscheme " .. choice)  -- Apply the selected color scheme
+      print("Switched to " .. choice)
+    else
+      print("No color scheme selected.")
+    end
+  end)
+end, { nargs = 0 })

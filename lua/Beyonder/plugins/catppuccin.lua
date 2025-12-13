@@ -8,6 +8,6 @@ return{"catppuccin/nvim", name = 'catppuccin',
           treesitter = true,
         }
       })
-      vim.cmd.colorscheme('catppuccin')
+      -- vim.cmd.colorscheme('catppuccin')
     end
   } 

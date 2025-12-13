@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>s", ":source<CR>")
 vim.keymap.set("n", "<leader>w", ":write<CR>")
 vim.keymap.set("n", "<leader>q", ":quit<CR>")
-vim.keymap.set("n", "<leader>Q", ":q!<CR>")
+vim.keymap.set('n', '<leader>Q', ":qall<CR>")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })

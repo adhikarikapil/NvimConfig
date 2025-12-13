@@ -9,7 +9,7 @@ return {
 
 			-- configure treesitter
 			treesitter.setup({ -- enable syntax highlighting
-				highlight = {
+			highlight = {
 					enable = true,
 				},
 				-- enable indentation
