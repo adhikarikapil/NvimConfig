@@ -212,7 +212,8 @@ return {
 			local lint = require("lint")
 
 			lint.linters_by_ft = {
-				python = { "pylint" }, }
+				python = { "pylint" },
+			}
 			local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
 			vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
@@ -268,6 +269,26 @@ return {
 					timeout_ms = 600,
 				})
 			end, { desc = "Format file or range (in visual mode)" })
+		end,
+	},
+	{
+		"nvim-lua/lsp-status.nvim",
+		config = function()
+			local lsp_status = require("lsp-status")
+
+			lsp_status.config({
+				status_symbol = "", -- LSP indicator
+				indicator_errors = "",
+				indicator_warnings = "",
+				indicator_info = "",
+				indicator_hint = "󰠠 ",
+				diagnostics = true,
+			})
+            -- Register progress updates
+            lsp_status.register_progress()
+
+            -- Optionally: set the statusline to show diagnostics
+            vim.o.statusline = '%!v:lua.require"lsp-status".status()'
 		end,
 	},
 }
