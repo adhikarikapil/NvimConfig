@@ -84,3 +84,8 @@ vim.api.nvim_create_user_command("SKEotaku", function(opts)
 		end
 	end)
 end, { nargs = 0 })
+
+-- Disable automatic comment continuation when pressing <Enter> (r) or o/O (o)
+vim.opt.formatoptions:remove({"r", "o"})
+--You may also want to remove 'c' to preven comments from auto-wrapping if they get too long
+-- vim.opt.formatoptions:remove("c")
